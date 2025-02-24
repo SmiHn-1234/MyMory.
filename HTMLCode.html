@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Starting Page -->
+    <div id="starting-page" class="page">
+        <header class="starting-header">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>It is Always Nice to Remember</h1>
+        </header>
+        <button id="start-button">Sign In / Log In</button>
+    </div>
+
+    <!-- Navigation Page -->
+    <header class="navbar" style="display: none;">
+        <div class="nav-left">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>My Timelines</h1>
+        </div>
+        <div class="nav-right">
+            <button id="add-new">ADD NEW</button>
+            <button id="library">Library</button>
+        </div>
+    </header>
+
+    <!-- Login/Sign-In Page -->
+    <div id="login-page" class="page" style="display: none;">
+        <h2>Login or Sign Up</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+
+    <!-- Timeline Library -->
+    <div id="library-page" class="page" style="display: none;">
+        <h2>Your Timelines</h2>
+        <div id="timeline-list">
+            <p>No timelines available.</p>
+        </div>
+    </div>
+
+    <!-- Timeline Creation Page -->
+    <div id="create-timeline-page" class="page" style="display: none;">
+        <h2>Create a New Timeline</h2>
+        <form id="timeline-form">
+            <label for="timeline-title">Timeline Title:</label>
+            <input type="text" id="timeline-title" name="timeline-title" required>
+
+            <label for="timeline-date">Date:</label>
+            <input type="date" id="timeline-date" name="timeline-date" required>
+
+            <label for="timeline-time">Time:</label>
+            <input type="time" id="timeline-time" name="timeline-time" required>
+
+            <label for="timeline-entry">Add Entry:</label>
+            <input type="text" id="timeline-entry" name="timeline-entry" placeholder="Enter text or photo URL">
+
+            <button type="button" id="add-entry">Add Entry</button>
+        </form>
+        <div id="timeline-preview">
+            <h3>Timeline Preview:</h3>
+            <ul id="preview-list"></ul>
+        </div>
+        <button id="save-timeline">Save Timeline</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
